@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>高級產品資訊卡片</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(to right, #ece9e6, #ffffff);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            padding: 1rem;
+        }
+        .card {
+            display: flex;
+            flex-direction: row;
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            width: 90%;
+            max-width: 600px;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+        }
+        .card-section {
+            flex: 1;
+            background-color: #f7f7f7;
+            padding: 2rem;
+            text-align: center;
+            border-right: 1px solid #ddd;
+        }
+        .card-section h2 {
+            font-size: 2.5rem;
+            color: #333;
+            margin-bottom: 0.5rem;
+        }
+        .card-section p {
+            font-size: 1rem;
+            color: #777;
+        }
+        .card-price {
+            flex: 1;
+            background-color: #e0e0e0;
+            padding: 2rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .card-price h2 {
+            font-size: 2.5rem;
+            color: #222;
+        }
+        /* RWD 手機排版 */
+        @media (max-width: 600px) {
+            .card {
+                flex-direction: column;
+                max-width: 90%;
+            }
+            .card-section, .card-price {
+                border-right: none;
+                border-bottom: 1px solid #ddd;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <div class="card-section">
+            <h2>5.5mm</h2>
+            <p>(1220 × 230 × 5.5mm)</p>
+        </div>
+        <div class="card-price">
+            <h2>$2200/坪</h2>
+        </div>
+    </div>
+
+</body>
+</html>
